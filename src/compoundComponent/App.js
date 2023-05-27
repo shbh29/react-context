@@ -8,6 +8,7 @@ export default function App() {
       <div className="App">
         <h1>Hello Shubham compound component</h1>
         <Switch >
+          <Switch.CheckBox></Switch.CheckBox>
           <Switch.On >Hi</Switch.On>
           <Switch.Off >Bye</Switch.Off>
         </Switch>
