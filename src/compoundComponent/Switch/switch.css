@@ -1,0 +1,53 @@
+/* Toggle Switch Container */
+.toggle-switch {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 24px;
+    margin-top: 10px;;
+  }
+
+  .toggle-label {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Hide the default checkbox */
+  .toggle-switch input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* Toggle Switch Track */
+  .toggle-switch .toggle-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 24px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Toggle Switch Thumb */
+  .toggle-switch .toggle-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  /* Toggle Switch Checked State */
+  .toggle-switch input[type="checkbox"]:checked + .toggle-track {
+    background-color: #4CAF50;
+  }
+  
+  .toggle-switch input[type="checkbox"]:checked + .toggle-track .toggle-thumb {
+    transform: translateX(26px);
+  }
+  
