@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React,{ useCallback, useRef, useState } from "react";
 
 function App() {
     const [messages, setMessages] = useState([]);
@@ -17,11 +17,12 @@ function App() {
 }
 
 function MessageList({messages}) {
+    const onClick = useRef(() => {});
     return (
         <>
             <ul>
                 {messages?.map(e => {
-                    return <Message message={e}/>
+                    return <Message message={e} onClick={onClick}/>
                 })}
             </ul>
         </>
