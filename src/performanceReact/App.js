@@ -49,12 +49,12 @@ class MessageList extends React.Component {
 }
 
 let count = 0;
-class Message extends React.Component {
-  shouldComponentUpdate(nextProps) {
-    const {message: newProps} = nextProps;
-    const {message: orginalProp} = this.props;
-    return newProps !== orginalProp;
-  }
+class Message extends React.PureComponent {
+  // shouldComponentUpdate(nextProps) {
+  //   const {message: newProps} = nextProps;
+  //   const {message: orginalProp} = this.props;
+  //   return newProps !== orginalProp;
+  // }
   render() {
     const {message} = this.props;
     console.log(`update count - ${count++} - ${message}`);
